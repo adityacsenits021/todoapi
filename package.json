@@ -1,0 +1,15 @@
+{
+  "name": "inter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stargate-oss/stargate-grpc-node-client": "^0.2.3",
+    "cassandra-driver": "^4.6.3"
+  }
+}
