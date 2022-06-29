@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@stargate-oss/stargate-grpc-node-client": "^0.2.3",
-    "cassandra-driver": "^4.6.3"
+    "cassandra-driver": "^4.6.3",
+    "firebase": "^9.8.4"
   }
 }

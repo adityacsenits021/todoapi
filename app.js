@@ -87,6 +87,45 @@ fastify.post('/additem', function(req, res){
   });
 
 
+  fastify.post('/signIn', function(req, res) {
+    const {name, email,password}=req.body;
+    signInWithEmailAndPassword(auth, email, password)
+            .then(cred => {
+            console.log('user logged in:', cred.user);
+            navigate('/');
+    })
+    .catch(err => {
+      console.log(err.message)
+    })
+    
+      }
+    );
+  fastify.post('/signUp', function(req, res) {
+    const {name, email,password}=req.body;
+    createUserWithEmailAndPassword(auth, email, password)
+            .then(cred => {
+                updateProfile(cred.user,{
+                    displayName:credential.name,
+                })
+                console.log('user created:', cred.user)
+    
+      }
+    );
+     } )
+    fastify.post('/logout',(req,res)=>{
+      signOut(auth)
+            .then(()=>{
+              console.log("You are logged out");
+            })
+            .catch((err)=>{
+              console.log(err.message);
+            })
+    })
+ 
+
+
+
+
 // Run the server!
 const start = async () => {
   try {
